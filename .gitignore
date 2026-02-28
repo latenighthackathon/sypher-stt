@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# App data (credentials, tokens)
+credentials.json
+token.json
+config.json
+
+# Models are large binaries — track via LFS or download separately
+models/
+
+# Temp files
+.tmp/
+*.tmp
+
+# Claude
+.claude/

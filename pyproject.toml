@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sypher-stt"
+version = "1.0.0"
+description = "Voice-to-text dictation for Windows. Hold a hotkey, speak, paste. Fully offline."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["speech-to-text", "whisper", "dictation", "voice", "transcription", "offline"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+dependencies = [
+    "faster-whisper>=1.1.0",
+    "sounddevice>=0.4.7",
+    "numpy>=1.24.0",
+    "pynput>=1.7.6",
+    "pyperclip>=1.8.2",
+    "pyautogui>=0.9.54",
+    "customtkinter>=5.2.0",
+    "pystray>=0.19.5",
+    "Pillow>=10.0.0",
+]
+
+[project.optional-dependencies]
+download = ["huggingface-hub>=0.21.0"]
+
+[project.urls]
+Homepage = "https://github.com/latenighthackathon/sypher-stt"
+Repository = "https://github.com/latenighthackathon/sypher-stt"
+Issues = "https://github.com/latenighthackathon/sypher-stt/issues"
+
+[project.scripts]
+sypher-stt = "sypher_stt.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
